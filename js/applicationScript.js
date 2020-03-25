@@ -51,6 +51,43 @@ var initClient = function(y) {
   console.log("Client initialized");
 };
 
+// testFunctionOne
+var testFunctionOne = function(){
+
+//start variable declaration
+   var returnOne = null;
+
+//end variable declaration
+
+   var testCallContent = null;
+  client.sendRequest("GET", testmethod, testCallContent, "text/plain", {}, false,
+  function(data, type) {
+    console.log(data);
+  },
+  function(error) {
+    console.log(error);
+  });
+
+  //Additional own javascript
+ return returnOne;
+}
+
+// testFunctionTwo
+var testFunctionTwo = function(testInputParam){
+
+//start variable declaration
+   var returnTwo = null;
+
+//end variable declaration
+
+
+  var testIntentContent = "initialized";
+  client.sendIntent("testIntentAction",testIntentContent,true);
+
+  //Additional own javascript
+ return returnTwo;
+}
+
 
 $(document).ready(function() {
   init();
